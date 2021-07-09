@@ -24,6 +24,15 @@ a, a li, a svg, a h5 {
   color: #000;
   text-decoration: none; }
 
+@media (max-width: 768px) {
+  .opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .listasmenu {
+    width: 100%;
+    padding-right: 8px; } }
+
 @media (max-width: 991px) {
   .hidehouse {
     display: inline-block;
@@ -163,7 +172,8 @@ main {
 @media (max-width: 1060px) {
   .escudos {
     display: flex;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    flex-direction: row; } }
 
 /* copa argentina */
 .titulobanner {
@@ -263,6 +273,9 @@ section {
     align-items: center; }
   .espaciado {
     padding: 10px; } }
+
+ol, ul {
+  padding-left: 0rem; }
 
 .fondomf {
   background-color: #000;
