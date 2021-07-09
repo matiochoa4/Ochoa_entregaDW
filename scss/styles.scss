@@ -1,0 +1,421 @@
+$colorUno: #000;
+$colorDos: #f8f9fa;
+$colorTres: #f8f9f8;
+$colorCuatro: #623307;
+$colorCinco: #131415;
+$colorSeis: #212529;
+$colorSiete: #9a9a9a;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  background-color: $colorDos;
+}
+
+body {
+  font-family: "Bebas Neue";
+  background-color: $colorDos;
+}
+
+/* HEADER */
+
+.sticky {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+}
+
+.hidehouse {
+  display: none;
+}
+
+a {
+  color: $colorUno;
+  text-decoration: none;
+  li {
+    @extend a;
+  }
+  svg {
+    @extend a;
+  }
+  h5 {
+    @extend a;
+  }
+}
+
+@media (max-width: 991px) {
+  .hidehouse {
+    display: inline-block;
+    margin-left: 4px;
+    margin-top: 1px;
+  }
+}
+
+.logo {
+  margin-left: 4px;
+  width: 45px;
+  height: 79.9px;
+}
+
+.btnmarg {
+  margin-right: 4px;
+  background-color: $colorUno;
+}
+
+.colorlupa {
+  color: $colorDos;
+}
+
+.navbar-toggler {
+  border: 1px;
+  margin-right: 7px;
+}
+
+.btn-outline-dark:hover {
+  background-color: $colorCuatro;
+}
+
+.sombra {
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu {
+  background-color: $colorDos;
+  :hover {
+    background-color: $colorSiete;
+  }
+}
+
+@media (max-width: 991px) {
+  .esco {
+    display: none;
+  }
+}
+
+/* MAIN */
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  background-color: $colorDos;
+}
+
+.tamañocarousel {
+  width: 75%;
+  padding: 5px;
+}
+
+.positionC {
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 575px) {
+  .tamañocarousel {
+    width: 90%;
+  }
+}
+
+.bordec {
+  border: 10px double;
+}
+
+.carousel-caption {
+  background-color: $colorSeis;
+  border-radius: 3px;
+}
+/* primera  */
+
+.positionC__primera {
+  @extend .positionC;
+}
+
+.tamañocarousel__primera {
+  width: 100%;
+  padding: 5px;
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.contenedorprimera {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 1;
+}
+
+.tableposition {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.tablepadd__primera {
+  padding-left: 15px;
+  & > h3 {
+    max-height: 40px;
+    background-color: $colorSeis;
+    color: $colorTres;
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 935px) {
+  .contenedorprimera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tablepadd__primera {
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
+}
+
+.bkgcd {
+  background-image: url(/imagenes/pruebacd.jpg);
+  border: 20px double $colorDos;
+  padding: 1rem;
+}
+
+.cdpadd {
+  padding: 3.3rem;
+  background-color: $colorCinco;
+}
+
+
+/* ascenso */
+
+.tablepadd__ascenso {
+  padding: 10px;
+  padding-top: 0;
+  & > h3 {
+    background-color: $colorSeis;
+    color: $colorTres;
+    padding: 0.3rem;
+  }
+}
+
+.escudos {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 1rem;
+  text-decoration: none;
+  color: $colorUno;
+  list-style-type: none;
+  li img {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .escudos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* copa argentina */
+
+.titulobanner {
+  text-align: center;
+  background-color: $colorSeis;
+  color: $colorTres;
+  padding: 0.3rem;
+}
+
+.fondobanner {
+  padding: 10px;
+  img {
+    width: 100%;
+  }
+}
+
+/* copas internacionales */
+
+.sectionbarchart {
+  padding: 20px;
+  background-color: $colorDos;
+}
+
+.bordebar {
+  border: 10px double $colorDos;
+  padding-top: 30px;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+.contenedornoti {
+  padding: 2rem;
+}
+
+@media (max-width: 767px) {
+  .imgcentrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* publicidad */
+
+.bordes {
+  border: 0.1px solid $colorSiete;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 5px -7px 9px -7px;
+}
+
+.textpubli {
+  font-size: 10px;
+  color: #212529;
+}
+
+.minipubli {
+  width: 60vw;
+}
+
+@media (max-width: 768px) {
+  .minipubli {
+    width: 60vw;
+  }
+}
+
+/* seccion noticias */
+
+.fondo {
+  background: linear-gradient(to bottom, $colorTres, $colorSiete);
+}
+
+.cardcolor {
+  background-color: $colorUno;
+  border-radius: 5px;
+}
+
+.fuentec {
+  color: $colorDos;
+}
+
+.updatec {
+  color: $colorSiete;
+}
+
+.gapp {
+  gap: 5px;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  background-color: $colorUno;
+  color: $colorDos;
+}
+
+section {
+  background-color: $colorDos;
+}
+
+.menufooter {
+  color: $colorTres;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  a {
+    color: $colorTres;
+  }
+  & li {
+    list-style-type: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menufooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  ul {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .espaciado {
+    padding: 10px;
+  }
+}
+
+.fondomf {
+  background-color: $colorUno;
+  padding: 30px;
+}
+
+.mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+@media (max-width: 666px) {
+  .footermob {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .iconsmob {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+  }
+}
+
+.animate__headShake {
+  --animate-duration: 2s;
+  &:hover {
+    animation: none;
+  }
+}
+
+/* formulario */
+
+.btngap {
+  gap: 1rem;
+}
+
+.boton {
+  background-color: $colorTres;
+  color: $colorUno;
+}
